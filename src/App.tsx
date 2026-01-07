@@ -20,12 +20,15 @@ const App = () => {
 
 
   return (
-    payStructures.map((item) => {
-      return <PriceCard{...item} />
-    })
+    <div className="container">
+      {payStructures.length > 0 ?
+        payStructures.map((item) => {
+          return <PriceCard {...item} />
+        }) : "There is a problem..."}
+    </div>
   )
 }
 
 export default App
 
- //<div>{payStructures.length > 0 && "miafaszom" }</div>
+//<div>{payStructures.length > 0 && "miafaszom" }</div>
