@@ -1,16 +1,16 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   font-family: sans-serif;
   --primary-color: rgb(0, 136, 255);
   --card-bg-color: rgba(255, 255, 255, 0.9);
 }
 
-#root{
+#root {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -20,4 +20,44 @@
   background-size: cover;
   background-position-x: right;
   background-position-y: bottom;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whole-card {
+  height: 350px;
+  width: 250px;
+  background-color: white;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 15px;
+}
+
+h1 {
+  margin: 10px
+}
+
+h2 {
+  margin: 10px
+}
+
+h5 {
+  margin: 5px
+}
+
+.try-button {
+  color: white;
+  background-color: rgb(68, 129, 250);
+  width: auto;
 }

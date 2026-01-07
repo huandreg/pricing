@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PriceCard from "./components/PriceCard";
 
 export type PayStructure = {
   name: string,
@@ -19,8 +20,12 @@ const App = () => {
 
 
   return (
-    <div></div>
+    payStructures.map((item) => {
+      return <PriceCard{...item} />
+    })
   )
 }
 
 export default App
+
+ //<div>{payStructures.length > 0 && "miafaszom" }</div>
