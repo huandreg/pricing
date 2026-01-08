@@ -91,6 +91,33 @@ h5 {
   }
 }
 
+@keyframes whole-card {
+  0% {
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    transform: scale(0.95) rotate(-1deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale(1.05) rotate(1deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.whole-card:hover{
+animation: whole-card 1s ease;
+}
+
+
 
 .highlighted {
   height: 350px;
@@ -117,7 +144,7 @@ h5 {
 }
 
 :root {
-  --mainColor: rgb(208, 159, 24);
+  --mainColor: rgb(214, 139, 0);
 }
 
 .toggle {
@@ -132,26 +159,30 @@ h5 {
   font-size: smaller;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: 0.4s;
 
   >div {
     position: relative;
     left: 0px;
     height: var(--toggleHeight);
     aspect-ratio: 1 / 1;
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 50%;
     border: calc(var(--toggleHeight) / 10) solid var(--mainColor);
-    transition: 0.4s;
     color: rgb(0, 0, 0);
+    transition: 0.4s;
   }
 }
 
 .toggle.on {
   background: rgb(16, 90, 210);
+  transition: 0.4s;
+
 
   >div {
     left: var(--toggleHeight);
     border: calc(var(--toggleHeight) / 10) solid rgb(16, 90, 210);
-    color: rgb(0, 0, 0);
+    transition: 0.4s;
+
   }
 }
