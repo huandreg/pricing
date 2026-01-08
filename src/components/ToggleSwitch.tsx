@@ -16,7 +16,7 @@ function ToggleSwitch({ toggleState, setToggle }: ToggleSwitchProp) {
         <div></div>
       </div>
       <br />
-      <h5>{toggleState ? "Yearly" : "Monthly"}</h5>
+      <h5>{toggleState ? "Yearly Plan" : "Monthly Plan"}</h5>
     </div>
   )
 }
