@@ -3,10 +3,10 @@ import type { PayStructure } from "../App"
 const PriceCard = (props: PayStructure) => {
   return (
 
-    <div className="whole-card">
+    <div className={props.highlighted ? "whole-card highlighted" : "whole-card"}>
       <h2>{props.name}</h2>
       <h1>{props.pricePerMonth === 0 ? "Free" : "$" + props.pricePerMonth }</h1>
-      <div className="feature-div">{props.features.map((item)=>{return <h5>{item}</h5>})}</div>
+      <div className="feature-div">{props.features.map((item)=>{return <h4>{item}</h4>})}</div>
       <div className="try-button">Try for Free</div>
     </div>
   )

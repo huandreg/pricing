@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import PriceCard from "./components/PriceCard";
+import ToggleSwitch from "./components/ToggleSwitch";
 
 export type PayStructure = {
   name: string,
   pricePerMonth: number,
-  features: string[];
+  features: string[],
+  highlighted: boolean
 }
 
 const App = () => {
-
 
   const [payStructures, getStructures] = useState<PayStructure[]>([])
 
@@ -20,15 +21,17 @@ const App = () => {
 
 
   return (
-    <div className="container">
-      {payStructures.length > 0 ?
-        payStructures.map((item) => {
-          return <PriceCard {...item} />
-        }) : "There is a problem..."}
+    <div className="outer-container">
+      <div className="price-card-line">
+        {payStructures.length > 0 ?
+          payStructures.map((item) => {
+            return <PriceCard {...item} />
+          }) : "LOADING..."}
+      </div>
+      <div className="toggle-container"><ToggleSwitch /></div>
     </div>
+
   )
 }
 
 export default App
-
-//<div>{payStructures.length > 0 && "miafaszom" }</div>

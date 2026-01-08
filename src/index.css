@@ -20,14 +20,42 @@
   background-size: cover;
   background-position-x: right;
   background-position-y: bottom;
+
 }
 
-.container {
+.price-card-line {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 10px;
+
 }
+
+h1 {
+  margin: 10px;
+  font-size: 40px;
+}
+
+h2 {
+  margin: 20px;
+}
+
+h4 {
+  margin: 5px;
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: medium;
+}
+
+.feature-div {
+  width: 200px,
+}
+
 
 .whole-card {
   height: 320px;
@@ -40,32 +68,90 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin: 15px;
-}
-
-h1 {
   margin: 10px;
-  font-size: 40px;
+
+  >.try-button {
+    display: flex;
+    color: white;
+    background-color: rgb(68, 129, 250);
+    height: 50px;
+    aspect-ratio: 4/1;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-weight: bold;
+    transition: 0.8s;
+  }
+
+  >.try-button:hover {
+    transform: scale(1.15);
+    transition: 0.8s;
+    cursor: pointer;
+  }
 }
 
-h2 {
-  margin: 20px;
-}
 
-h5 {
-  margin: 5px;
-  font-weight: 500;
-}
-
-.try-button {
-  display: flex;
-  color: white;
+.highlighted {
+  height: 350px;
   background-color: rgb(68, 129, 250);
-  height: 50px;
-  aspect-ratio: 4/1;
-  border-radius: 25px;
+  color: white;
+
+  >.try-button {
+    color: black;
+    background-color: white;
+  }
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.toggle-container {
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  text-align: center;
+}
 
+:root {
+  --mainColor: rgb(208, 159, 24);
+}
+
+.toggle {
+  --toggleHeight: 40px;
+  height: var(--toggleHeight);
+  aspect-ratio: 2 / 1;
+  background: var(--mainColor);
+  border-radius: calc(0.5 * var(--toggleHeight));
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  font-size: smaller;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  >div {
+    position: relative;
+    left: 0px;
+    height: var(--toggleHeight);
+    aspect-ratio: 1 / 1;
+    background: white;
+    border-radius: 50%;
+    border: calc(var(--toggleHeight) / 10) solid var(--mainColor);
+    transition: 0.4s;
+    color: rgb(0, 0, 0);
+  }
+}
+
+.toggle.on {
+  background: rgb(16, 90, 210);
+
+  >div {
+    left: var(--toggleHeight);
+    border: calc(var(--toggleHeight) / 10) solid rgb(16, 90, 210);
+    color: rgb(0, 0, 0);
+  }
 }
