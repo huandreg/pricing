@@ -1,8 +1,10 @@
-import { useState } from "react"
 
-function ToggleSwitch() {
-  const [toggleState, setToggle] = useState<boolean>(false)
+type ToggleSwitchProp = {
+  toggleState: boolean;
+  setToggle: (type: boolean) => void;
+}
 
+function ToggleSwitch({ toggleState, setToggle }: ToggleSwitchProp) {
   function click() {
     setToggle(!toggleState)
   }
@@ -13,7 +15,7 @@ function ToggleSwitch() {
         className={toggleState ? "toggle on" : "toggle"}>
         <div></div>
       </div>
-      <br/>
+      <br />
       <h5>{toggleState ? "Yearly" : "Monthly"}</h5>
     </div>
   )

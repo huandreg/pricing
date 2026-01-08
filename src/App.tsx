@@ -12,6 +12,8 @@ export type PayStructure = {
 const App = () => {
 
   const [payStructures, getStructures] = useState<PayStructure[]>([])
+  const [toggleState, setToggle] = useState<boolean>(false)
+
 
   useEffect(() => {
     fetch("data.json")
@@ -25,10 +27,10 @@ const App = () => {
       <div className="price-card-line">
         {payStructures.length > 0 ?
           payStructures.map((item) => {
-            return <PriceCard {...item}/>
+            return <PriceCard {...item} toggleState={toggleState}/>
           }) : "LOADING..."}
       </div>
-      <div className="toggle-container"><ToggleSwitch /></div>
+      <div className="toggle-container"><ToggleSwitch toggleState={toggleState} setToggle={setToggle} /></div>
     </div>
 
   )
