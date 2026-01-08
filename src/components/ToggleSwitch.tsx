@@ -13,10 +13,10 @@ function ToggleSwitch() {
         className={toggleState ? "toggle on" : "toggle"}>
         <div></div>
       </div>
+      <br/>
       <h5>{toggleState ? "Yearly" : "Monthly"}</h5>
     </div>
   )
 }
-
 
 export default ToggleSwitch

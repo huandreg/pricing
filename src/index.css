@@ -47,9 +47,10 @@ h4 {
 }
 
 h5 {
-  font-weight: bold;
+  font-weight: bolder;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: medium;
+  font-size: large;
+  font-style: italic;
 }
 
 .feature-div {
@@ -96,15 +97,21 @@ h5 {
     transform: scale(1);
   }
 
-  10%, 20% {
+  10%,
+  20% {
     transform: scale(0.95) rotate(-1deg);
   }
 
-  30%, 50%, 70%, 90% {
+  30%,
+  50%,
+  70%,
+  90% {
     transform: scale(1.05) rotate(1deg);
   }
 
-  40%, 60%, 80% {
+  40%,
+  60%,
+  80% {
     transform: scale(1.05) rotate(-1deg);
   }
 
@@ -113,8 +120,8 @@ h5 {
   }
 }
 
-.whole-card:hover{
-animation: whole-card 1s ease;
+.whole-card:hover {
+  animation: whole-card 1s ease;
 }
 
 
@@ -160,6 +167,7 @@ animation: whole-card 1s ease;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   transition: 0.4s;
+  filter: drop-shadow(10px 10px 10px #bcc609aa);
 
   >div {
     position: relative;
@@ -171,12 +179,15 @@ animation: whole-card 1s ease;
     border: calc(var(--toggleHeight) / 10) solid var(--mainColor);
     color: rgb(0, 0, 0);
     transition: 0.4s;
+    filter: drop-shadow(10px 10px 10px #d43505aa);
   }
 }
 
 .toggle.on {
   background: rgb(16, 90, 210);
   transition: 0.4s;
+
+
 
 
   >div {

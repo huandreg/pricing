@@ -25,7 +25,7 @@ const App = () => {
       <div className="price-card-line">
         {payStructures.length > 0 ?
           payStructures.map((item) => {
-            return <PriceCard {...item} />
+            return <PriceCard {...item}/>
           }) : "LOADING..."}
       </div>
       <div className="toggle-container"><ToggleSwitch /></div>
